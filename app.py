@@ -12,9 +12,10 @@ cases_csv = 'cases.csv'
 if not os.path.exists(cases_csv):
     with open(cases_csv, 'w', newline='') as file:
         writer = csv.writer(file)
+        # Header maker
         writer.writerow(['name','surname','email', 'case_number', 'case_file'])
         
-# Git hub test
+
 @app.route('/')
 def home():
     return "Welcome to the Case Management System!"
